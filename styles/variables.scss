@@ -1,0 +1,34 @@
+//text 
+$body: #312F2C;
+$body-medium: #433D37;
+$body-light: #C7BEB6;
+$body-lightest: #e0dbd6;
+
+//palette 
+$off-white: #FFFCF8; //background
+
+$dark-green: #1a753a;
+$green: #31d668;
+$mint: #d0f3c8;
+
+//shadow
+$transparent: rgba(235, 233, 229, 0.75); // for modal overlay  
+$shadow: rgb(235, 233, 229); // for shadows and disabled states
+$soft-shadow: 4px 4px 16px $shadow, // box shadow
+-4px -4px 16px #ffffff; 
+
+/** VARIABLES */
+$max-width: 1140px; 
+ 
+//borders 
+$border-largest: 1.5rem;
+$border-large: 1rem;
+$border-small: 0.5rem; 
+$border-smallest: 5px; 
+
+$border-body: 1px solid $body; 
+$border-trans: 1px solid transparent; 
+$border: 1px solid black; //for testing 
+
+//animation
+$fade: .3s;

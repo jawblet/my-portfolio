@@ -1,0 +1,54 @@
+.home {
+ display: grid;
+ grid-template-columns: 15rem 1fr 15rem;
+ grid-template-rows: repeat(3, 1fr);
+ overflow: hidden;
+ height: 100vh;
+}
+
+@keyframes loadblink {
+  0%   {opacity: 1; }
+  25% {opacity: 1; }
+  50% {opacity: 0; }
+  75% {opacity: 1; }
+  100% {opacity: 1; }
+}
+
+.nav {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+  padding: 1rem;
+  &_link {
+    color: $mint;
+    cursor: pointer;
+    transition: all $fade;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.leo {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: end;
+  align-self: end;
+  padding: 1rem;
+}
+
+
+/*
+.test {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 1rem;
+  background-color: yellowgreen;
+}
+*/

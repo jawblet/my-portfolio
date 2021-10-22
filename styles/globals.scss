@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "GT-Alpina";
+  src: url("./assets/GT-Alpina.otf");
+}
+
+@font-face {
+  font-family: "Atlas-Grotesk";
+  src: url("./assets/Atlas-Grotesk.otf");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 200%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all $fade;
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "GT-Alpina";
+  font-weight: 200;  
+  letter-spacing: 2px;
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-family: "Atlas-Grotesk";
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-family: "Atlas-Grotesk";
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+h4 {
+  font-family: "GT-Alpina";
+  font-weight: 100;
+}
+
+h5 {
+  font-family: "Atlas-Grotesk";
+  letter-spacing: 0.5px;
+  font-size: 0.7rem;
+  color: $body-light;
+}
+
+line {
+  stroke: $body;
+  stroke-width: 3px;
+  opacity: 0.25;
+}
+
+text {
+  white-space: pre;
+  fill: black;
+  font-size: 60px;
+}
+
+.container {
+  min-height: 100vh; 
+  padding: 0 0.5rem;
+  height: 100vh;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.select { 
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  cursor: grabbing;
+}
+
+
+/*
+.flip-enter {
+  transform: rotateY(0deg);
+}
+.flip-enter-active {
+  transform: rotateY(180deg);
+  transition: transform .3s cubic-bezier(.63,-0.32,.4,1.39);
+}
+
+.flip-exit {
+//  transform: rotateY(5deg);
+}
+
+.flip-exit-active {
+ // transform: rotateY(90deg);
+ // transition: transform .8s cubic-bezier(.63,-0.32,.4,1.39);
+}
+
+sup {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+*/

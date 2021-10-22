@@ -1,0 +1,53 @@
+.container {
+    transform:rotate(5deg);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+}
+
+.card {
+    box-shadow: 2px 2px 3px $body-light;
+    background-color: $off-white;
+    cursor: pointer;
+    width: 25rem;
+    height: 15rem;
+    padding: 1.5rem;
+    transition: all $fade;
+    perspective: 50rem;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    &:hover {
+        box-shadow: 4px 4px 10px $body-lightest;
+    }
+   &_front {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       height: 100%; 
+   }
+   &_head {
+       position: relative;
+   }
+    &_title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &_bottom {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1.5rem;
+    }
+    &_back {
+        text-align: justify;
+        padding: 1rem;
+    }
+}
+
+.email {
+    &:hover{
+        color: $green;
+    }
+}
