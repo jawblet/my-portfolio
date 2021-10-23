@@ -1,18 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import styles from "../styles/Card.module.scss";
 import CardFront from "./CardFront";
+import CardBack from './CardBack';
 
-const CardBack = () => {
-    return(
-        <div className={styles.card_back}>
-            <h3>
-                julia bell likes software.
-                she went to penn, and is now a product manager at piano.
-                she lives in brooklyn.
-            </h3>
-        </div>
-    )
-}
 
 const Card = (props) => {
     const { banner, setBanner } = props;
@@ -21,6 +11,7 @@ const Card = (props) => {
     const starRef = useRef(null);
     const emailRef = useRef(null);
 
+    // copy email to clipboard 
     async function copyTextToClipboard(text) {
         if ('clipboard' in navigator) {
              return await navigator.clipboard.writeText(text);
@@ -30,6 +21,13 @@ const Card = (props) => {
     }
 
     const handleClick = (e) => {
+        // if emailRef is clicked 
+        if(emailRef.current && emailRef.current.contains(e.target)) {
+            copyTextToClipboard("juliabell021@gmail.com");
+            return setBanner("email");
+        }
+
+
         // if starRef is clicked 
         if(starRef.current && starRef.current.contains(e.target)) {
             if(banner === "stars") {
@@ -38,13 +36,12 @@ const Card = (props) => {
             return setBanner("stars");
         }
 
-        if(emailRef.current && emailRef.current.contains(e.target)) {
-            copyTextToClipboard("juliabell021@gmail.com");
-            return setBanner("email");
+         // if card is flipped when stars are open 
+         if(starRef.current && !starRef.current.contains(e.target)) {
+            setBanner(null);
          }
-
+       
          setFront(!front);
-
     }
 
     return (

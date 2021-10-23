@@ -9,8 +9,13 @@ const Nav = () => {
   return(
   <div className={styles.nav}>
               <h2 className={styles.nav_link}>Resume</h2>
-              <h2 className={styles.nav_link}>Projects</h2>
+              <h2 className={styles.nav_link}>Misc.</h2>
            </div>
+  )
+}
+
+const Leo = () => {
+  return(<h1>yes...she's a leo😈🔥🌞</h1>
   )
 }
 
@@ -19,14 +24,14 @@ const Copied = ({ setBanner, banner }) => {
 
     useTimeout(() => {
       setHasTimeElapsed(true);
-    }, 1500);
+    }, 3000);
 
     useEffect(() => {
       hasTimeElapsed && setBanner(null);
   }, [hasTimeElapsed]);
 
   return (
-      <h1 className={styles.leo}>email copied to clipboard 🤠😈🔥</h1>
+      <h1 className={styles.leo}>email copied to clipboard 💾⛓🖇</h1>
   )
 }
 
@@ -44,17 +49,18 @@ export default function Home() {
       <div className={styles.home}>
           <Card banner={banner} setBanner={setBanner}/>
           <Fade enter={!!(banner)}>
-          {(function() {
-              switch (banner) {
-                case 'stars':
-                  return (
-                  <h1 className={styles.leo}>yes...she's a leo 🤠😈🔥</h1>);
-                case 'email':
-                  return (<Copied banner={banner} setBanner={setBanner}/>);
-                default:
-                  return <></>;
-              }
-            })()}
+            <div className={styles.banner}>
+              {(function() {
+                  switch (banner) {
+                    case 'stars':
+                      return (<Leo/>);
+                    case 'email':
+                      return (<Copied banner={banner} setBanner={setBanner}/>);
+                    default:
+                      return <></>;
+                  }
+                })()}
+            </div>
           </Fade>
       </div>
     </>

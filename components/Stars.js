@@ -3,23 +3,6 @@ import Fade from "./Fade";
 
 const Stars = (props, ref) => {
     const { banner, setBanner } = props;
-    const [isStars, setIsStars] = useState(false);
-
-    useEffect(() => {
-        /*
-        if(banner === "stars") {
-            return setIsStars(true);
-        }
-
-        return setIsStars(false); */
-
-       return() => {
-           if(banner === "stars") {
-                setBanner(null);
-           }
-       }
-    }, [banner]);
-
 
     return (
         <div className="stars">
