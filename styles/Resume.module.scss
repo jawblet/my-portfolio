@@ -1,0 +1,39 @@
+.resume {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    min-height: 100vh;
+    padding: 5rem;
+    gap: 5rem;
+    position:relative;
+    &_col1 {
+        display: flex;
+        flex-direction: column;
+    }
+    &_col2 {
+        display: flex;
+        flex-direction: column;
+    }
+    &_header {
+        line-height: 100%;
+    }
+}
+
+.section {
+    line-height: 150%;
+    padding-bottom: 3rem;
+    &_title {
+        padding-bottom: 1.5rem;
+        letter-spacing: 1px;
+        color: $body;
+    }
+    &_sub {
+        padding-bottom: 1.5rem;
+    }
+}
+
+.name {
+   // display: inline-block;
+   // background-color: $green;
+   // color: $mint;
+    padding: 0.5rem;
+}

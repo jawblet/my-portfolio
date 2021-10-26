@@ -3,7 +3,7 @@ import styles from "../styles/Card.module.scss";
 import Stars from "./Stars";
 
 const CardFront = (props, ref) => {
-    return (
+    return ( 
         <div className={styles.card_front}>
                 <div className={styles.card_head}>
                     <Stars {...props} ref={props.starRef}/>

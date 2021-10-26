@@ -1,11 +1,11 @@
 import { CSSTransition } from "react-transition-group";
 
-const Fade = ({ enter, children }) => {
+const Fade = ({ enter, short, children }) => {
     return (
         <CSSTransition 
             unmountOnExit
             in={enter}
-            timeout={300}
+            timeout={short ? 100 : 300}
             classNames="fade"> 
             {children}
         </CSSTransition>

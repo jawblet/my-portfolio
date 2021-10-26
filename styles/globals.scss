@@ -1,11 +1,17 @@
-@font-face {
+@font-face{
   font-family: "GT-Alpina";
   src: url("./assets/GT-Alpina.otf");
 }
 
-@font-face {
+@font-face{
   font-family: "Atlas-Grotesk";
   src: url("./assets/Atlas-Grotesk.otf");
+}
+
+
+@font-face{
+  font-family: "Atlas-Grotesk-Bold";
+  src: url("./assets/Atlas-Grotesk-Bold.otf");
 }
 
 *,
@@ -66,6 +72,10 @@ h5 {
   color: $body-light;
 }
 
+p {
+  font-family: "Atlas-Grotesk";
+}
+
 line {
   stroke: $body;
   stroke-width: 3px;
@@ -78,10 +88,25 @@ text {
   font-size: 60px;
 }
 
+ul {
+  padding-left: 3rem;
+  list-style-type: circle;
+}
+
+sup {
+  font-size: 0.6rem;
+  font-family: "Atlas-Grotesk-Bold";
+  margin-left: 1rem;
+}
+
 .container {
   min-height: 100vh; 
   padding: 0 0.5rem;
   height: 100vh;
+  max-width: 1250px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
 }
 
 .fade-enter {
@@ -102,7 +127,6 @@ text {
   transition: opacity 300ms, transform 300ms;
 }
 
-
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -120,27 +144,48 @@ text {
   cursor: grabbing;
 }
 
-
-/*
-.flip-enter {
-  transform: rotateY(0deg);
-}
-.flip-enter-active {
-  transform: rotateY(180deg);
-  transition: transform .3s cubic-bezier(.63,-0.32,.4,1.39);
+.bold {
+  // font-weight: bold;
+  font-family: "Atlas-Grotesk-Bold";
 }
 
-.flip-exit {
-//  transform: rotateY(5deg);
+.ital {
+  font-style: italic;
 }
 
-.flip-exit-active {
- // transform: rotateY(90deg);
- // transition: transform .8s cubic-bezier(.63,-0.32,.4,1.39);
+.body {
+  color: $body;
 }
 
-sup {
-  font-size: 0.5rem;
-  font-weight: bold;
+::selection {
+  color: $mint;
+  background-color: $green;
 }
-*/
+
+.biglink {
+  color: $mint;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all $fade;
+  &:hover {
+    background-color: $green;
+  }
+}
+
+.link {
+  color: $dark-green;
+  background-color: transparent;
+  transition: all $fade;
+  cursor: pointer;
+  &:hover {
+    color: $mint;
+    background-color: $green;
+  }
+}
+
+.img {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}

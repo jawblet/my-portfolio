@@ -4,6 +4,7 @@
  grid-template-rows: repeat(3, 1fr);
  overflow: hidden;
  height: 100vh;
+ position: relative;
 }
 
 .nav {
@@ -13,14 +14,6 @@
   grid-row-end: 2;
   justify-self: end;
   padding: 1rem;
-  &_link {
-    color: $mint;
-    cursor: pointer;
-    transition: all $fade;
-    &:hover {
-      color: $green;
-    }
-  }
 }
 
 .banner {

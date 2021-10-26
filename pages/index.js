@@ -2,17 +2,11 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Card from '../components/Card'
 import Fade from '../components/Fade'
+import Nav from '../components/Nav'
+import Resume from '../components/Resume'
 import styles from '../styles/Home.module.scss'
-import useTimeout from "../utils/useTimeout";
-
-const Nav = () => {
-  return(
-  <div className={styles.nav}>
-              <h2 className={styles.nav_link}>Resume</h2>
-              <h2 className={styles.nav_link}>Misc.</h2>
-           </div>
-  )
-}
+import useTimeout from "../utils/useTimeout"
+import Img from '../components/Img'
 
 const Leo = () => {
   return(<h1>yes...she's a leo😈🔥🌞</h1>
@@ -37,6 +31,7 @@ const Copied = ({ setBanner, banner }) => {
 
 export default function Home() {
   const [banner, setBanner] = useState(null);
+  const [img, setImg] = useState(false); 
 
   console.log(banner);
   return (
@@ -47,6 +42,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico"/>
       </Head>
       <div className={styles.home}>
+          <Nav img={img} setImg={setImg}/>
           <Card banner={banner} setBanner={setBanner}/>
           <Fade enter={!!(banner)}>
             <div className={styles.banner}>
@@ -62,7 +58,11 @@ export default function Home() {
                 })()}
             </div>
           </Fade>
+         <Fade enter={img} short>
+           <Img/>
+         </Fade>
       </div>
+      <Resume/>
     </>
   )
 }
