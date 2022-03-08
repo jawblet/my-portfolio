@@ -33,7 +33,7 @@ const Copied = ({ setBanner }) => {
     return (<h1>email copied to clipboard 💾⛓🖇</h1>)
 }
 
-const BottomBanner = ({setBanner, banner}) => {
+const BottomBanner = ({setBanner, setImg, banner}) => {
     return (
         <Fade enter={!!(banner)}>
         <div className={styles.banner}>

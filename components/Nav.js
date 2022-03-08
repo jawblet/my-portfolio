@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 
-const Nav = ({ img, setImg }) => {
+const Nav = ({ img, setImg, setBanner }) => {
     const router = useRouter();
 
     return(
     <div className="home__nav">
-        <h2 className="biglink" onClick={() => setImg(!img)}>
+        <h2 className="biglink" onClick={() => {setBanner(null); setImg(!img)}}>
             &#9786;
         </h2>
         <h2 className="biglink">

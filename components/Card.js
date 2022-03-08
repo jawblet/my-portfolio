@@ -4,7 +4,7 @@ import CardBack from './CardBack';
 import styles from "../styles/Card.module.scss";
 
 const Card = (props) => {
-    const { banner, setBanner } = props;
+    const { banner, setBanner, setImg } = props;
     const [front, setFront] = useState(true);
 
     const starRef = useRef(null);
@@ -20,6 +20,8 @@ const Card = (props) => {
     }
 
     const handleClick = (e) => {
+        setImg(null);
+
         // if emailRef is clicked 
         if(emailRef.current && emailRef.current.contains(e.target)) {
             copyTextToClipboard("juliabell021@gmail.com");
@@ -28,9 +30,6 @@ const Card = (props) => {
 
         // if starRef is clicked 
         if(starRef.current && starRef.current.contains(e.target)) {
-            if(banner === "stars") {
-               return setBanner(null);
-            }
             return setBanner("stars");
         }
 

@@ -214,14 +214,14 @@ sup {
   }
   &_bottom {
     flex-shrink: 1;
-    max-height: 10rem;
+    height: 10rem;
     display: flex;
     justify-content: right;
     align-items: top;
-    border: 1px solid black;
     display: relative;
   }
  }
+
 
 
 // SMALL SCREEN

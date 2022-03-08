@@ -26,16 +26,15 @@ export default function Home() {
       <PageHead/>
       <div className="home">
           <div className="home_top">
-              <Nav img={img} setImg={setImg}/>
+              <Nav img={img} setImg={setImg} setBanner={setBanner}/>
           </div>
           <div className="home_middle">
-            <Card banner={banner} setBanner={setBanner}/>
+            <Card banner={banner} setImg={setImg} setBanner={setBanner}/>
           </div>
          <div className="home_bottom">
-           <div>
-            <Img/>
-           </div>
-             
+           <Fade enter={img} short>
+              <Img setImg={setImg}/>    
+            </Fade>
          </div>
           <BottomBanner banner={banner} setBanner={setBanner}/>
       </div>
