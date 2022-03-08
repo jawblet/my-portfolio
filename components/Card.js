@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
-import styles from "../styles/Card.module.scss";
 import CardFront from "./CardFront";
 import CardBack from './CardBack';
-
+import styles from "../styles/Card.module.scss";
 
 const Card = (props) => {
     const { banner, setBanner } = props;
@@ -27,7 +26,6 @@ const Card = (props) => {
             return setBanner("email");
         }
 
-
         // if starRef is clicked 
         if(starRef.current && starRef.current.contains(e.target)) {
             if(banner === "stars") {
@@ -45,7 +43,7 @@ const Card = (props) => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className="home__card">
             <div className={`${styles.card} noselect`} onClick={(e) => handleClick(e)}>
                 {front 
                     ? <CardFront starRef={starRef}

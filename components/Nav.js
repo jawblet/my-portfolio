@@ -1,19 +1,20 @@
 import { useRouter } from 'next/router'
-import styles from '../styles/Home.module.scss'
-
 
 const Nav = ({ img, setImg }) => {
     const router = useRouter();
 
     return(
-    <div className={styles.nav}>
-        <h2 className="biglink" onClick={() => router.push({pathName: "", hash: "resume"})}>Resume</h2>
-        <h2 className="biglink" 
-            //onMouseEnter={() => { setImg(true) }}
-            //onMouseLeave={() => setImg(false)}
-            onClick={() => setImg(!img)}
-            >
+    <div className="home__nav">
+        <h2 className="biglink" onClick={() => setImg(!img)}>
             &#9786;
+        </h2>
+        <h2 className="biglink">
+            <a href="JuliaBell_resume.pdf" target="_blank">
+                Resume&nbsp;<sup>&#8599;</sup>
+            </a>
+        </h2>
+        <h2 className="biglink" onClick={() => router.push({pathName: "", hash: "projects"})}>
+            Projects &#8628;
         </h2>
     </div>
 )
@@ -22,3 +23,5 @@ const Nav = ({ img, setImg }) => {
 export default Nav;
 
 //    <h2 className="biglink">Misc.</h2>
+//    onMouseEnter={() => { setImg(true) }}
+//    onMouseLeave={() => setImg(false)}

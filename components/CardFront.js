@@ -21,8 +21,8 @@ const CardFront = (props, ref) => {
                     <a href="https://github.com/jawblia" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
                         <h4>github</h4>
                     </a>
-                    <a href="https://www.are.na/j-b-lol-w6xh8sc" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-                        <h4>are.na</h4>
+                    <a href="https://medium.com/@jawblia" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                        <h4>medium</h4>
                     </a>
                 </div>
         </div>
