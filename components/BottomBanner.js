@@ -3,24 +3,34 @@ import Fade from './Fade'
 import useTimeout from '../utils/useTimeout'
 import styles from '../styles/Banner.module.scss'
 
-const Leo = () => {
+const time = 1500;
+
+const Leo = ({ setBanner }) => {
+  const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
+  
+      useTimeout(() => {
+        setHasTimeElapsed(true);
+      }, time);
+  
+      useEffect(() => {
+        hasTimeElapsed && setBanner(null);
+    }, [hasTimeElapsed]);
+
     return(<h1>yes...she's a leo😈🔥🌞</h1>)
   }
 
-const Copied = ({ setBanner, banner }) => {
+const Copied = ({ setBanner }) => {
     const [hasTimeElapsed, setHasTimeElapsed] = useState(false);
   
       useTimeout(() => {
         setHasTimeElapsed(true);
-      }, 3000);
+      }, time);
   
       useEffect(() => {
         hasTimeElapsed && setBanner(null);
     }, [hasTimeElapsed]);
   
-    return (
-        <h1>email copied to clipboard 💾⛓🖇</h1>
-    )
+    return (<h1>email copied to clipboard 💾⛓🖇</h1>)
 }
 
 const BottomBanner = ({setBanner, banner}) => {
@@ -30,9 +40,9 @@ const BottomBanner = ({setBanner, banner}) => {
           {(function() {
               switch (banner) {
                 case 'stars':
-                  return (<Leo/>);
+                  return (<Leo setBanner={setBanner}/>);
                 case 'email':
-                  return (<Copied banner={banner} setBanner={setBanner}/>);
+                  return (<Copied setBanner={setBanner}/>);
               }
             })()}
         </div>

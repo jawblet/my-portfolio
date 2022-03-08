@@ -32,9 +32,10 @@ export default function Home() {
             <Card banner={banner} setBanner={setBanner}/>
           </div>
          <div className="home_bottom">
-            <Fade enter={img} short>
-              <Img/>
-            </Fade>
+           <div>
+            <Img/>
+           </div>
+             
          </div>
           <BottomBanner banner={banner} setBanner={setBanner}/>
       </div>
@@ -42,3 +43,9 @@ export default function Home() {
     </>
   )
 }
+
+/**
+  <Fade enter={img} short>
+              <Img/>
+            </Fade>
+ */

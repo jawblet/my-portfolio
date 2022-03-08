@@ -9,7 +9,7 @@ const Nav = ({ img, setImg }) => {
             &#9786;
         </h2>
         <h2 className="biglink">
-            <a href="JuliaBell_resume.pdf" target="_blank">
+            <a className='plain' href="JuliaBell_resume.pdf" target="_blank">
                 Resume&nbsp;<sup>&#8599;</sup>
             </a>
         </h2>
