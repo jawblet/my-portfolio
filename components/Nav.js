@@ -21,7 +21,3 @@ const Nav = ({ img, setImg, setBanner }) => {
 };
 
 export default Nav;
-
-//    <h2 className="biglink">Misc.</h2>
-//    onMouseEnter={() => { setImg(true) }}
-//    onMouseLeave={() => setImg(false)}
