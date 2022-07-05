@@ -15,13 +15,13 @@ const CardFront = (props, ref) => {
                     </h5>
                 </div>
                 <div className={styles.card_bottom}>
-                    <a href="https://www.linkedin.com/in/jawblia/" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <a href="https://www.linkedin.com/in/jawblet/" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
                         <h4>linkedin</h4>
                     </a>
-                    <a href="https://github.com/jawblia" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <a href="https://github.com/jawblet" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
                         <h4>github</h4>
                     </a>
-                    <a href="https://medium.com/@jawblia" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <a href="https://medium.com/@jawblet" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
                         <h4>medium</h4>
                     </a>
                 </div>
