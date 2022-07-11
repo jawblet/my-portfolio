@@ -11,7 +11,7 @@ const CardFront = (props, ref) => {
                 <div className={styles.card_title}>
                     <h1>julia bell</h1>
                     <h5 className={`${styles.email} select`} ref={ref}>
-                        julia.bell@piano.io
+                        juliabell021@gmail.com
                     </h5>
                 </div>
                 <div className={styles.card_bottom}>
