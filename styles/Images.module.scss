@@ -1,0 +1,23 @@
+.gallery {
+    margin: 1.5rem 0;
+    &_lower {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+.photo {
+    display: flex; 
+    border: 1px solid transparent; 
+    transition: all $fade;
+    &_active {
+        border: 1px solid $mint;
+        display: flex; 
+        opacity: 0.5;
+        transition: all $fade;
+    }
+}
+
+.fade {
+    transition: all $fade;
+}

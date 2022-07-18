@@ -1,9 +1,56 @@
+.project_summary {
+    padding: 1rem;
+    padding-bottom: 5rem;
+    width: 75%;
+}
+
 .projects {
     padding: 1rem;
+    width: 50%;
     &_title {
         padding-bottom: 1rem;
     }
     &_body {
         padding: 1rem; 
     }
+}
+
+.project {
+    margin-bottom: 3rem;
+}
+
+.title {
+    padding-bottom: 0.5rem;
+}
+
+.text {
+ //line-height: 150%;
+}
+
+.tags {
+margin-top: 1rem;
+    > * {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5 rem;
+    }
+} 
+   
+
+.tag {
+    position: relative;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem;
+    transition: all 0.35s;
+    break-inside: avoid; 
+    background-color: $mint;
+    color: $body-medium;
+    line-height: 100%;
+ //   font: 
+}
+
+.back {
+    margin-bottom: 1rem;
 }

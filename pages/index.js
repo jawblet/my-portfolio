@@ -6,6 +6,7 @@ import Nav from '../components/Nav'
 import Img from '../components/Img'
 import BottomBanner from '../components/BottomBanner'
 import Projects from '../components/Projects'
+import ProjectSummary from '../components/ProjectSummary'
 
 const PageHead = () => {
   return(
@@ -38,7 +39,7 @@ export default function Home() {
          </div>
           <BottomBanner banner={banner} setBanner={setBanner}/>
       </div>
-      <Projects/>
+      <ProjectSummary/>
     </>
   )
 }
