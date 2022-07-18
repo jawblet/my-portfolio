@@ -15,7 +15,9 @@ const Arrive = () => {
         <div className={styles.project} id="#arrive_anywhere">
             <h2 className={styles.title}>Arrive Anywhere</h2>
             <code>2020-2021</code>
-            <p>Description TBD</p>
+            <p>Arrive Anywhere was an online house created to exchange notes and links during COVID lockdown. The concept + design was a result of collaboration with Gretchen Alexander.</p>
+            <br/>
+            <p>The project was showcased at the 2021 <a href="https://www.4sonline.org/meeting/past-meetings/4s-2021-toronto/" target="_blank"> 2021 4S (Society for Social Studies of Science) annual meeting</a>.</p>
         </div>
     )
 }
