@@ -11,8 +11,8 @@ import ProjectSummary from '../components/ProjectSummary'
 const PageHead = () => {
   return(
     <Head>
-      <title>@jawblia</title>
-      <meta name="@jawblia" content="Julia Bell"/>
+      <title>@jawblet</title>
+      <meta name="@jawblet" content="Julia Bell"/>
       <link rel="icon" href="/favicon.ico"/>
     </Head>
   )

@@ -18,6 +18,7 @@ const Arrive = () => {
             <p>Arrive Anywhere was an online house created to exchange notes and links during COVID lockdown. The concept + design was a result of collaboration with Gretchen Alexander.</p>
             <br/>
             <p>The project was showcased at the 2021 <a href="https://www.4sonline.org/meeting/past-meetings/4s-2021-toronto/" target="_blank"> 2021 4S (Society for Social Studies of Science) annual meeting</a>.</p>
+            <Tag text="React"/> <Tag text="Node.js"/> <Tag text="MongoDB"/>
         </div>
     )
 }
@@ -89,10 +90,9 @@ const Skylight = () => {
     )
 }
 
-const project = (props) => {
+const project = () => {
     const router = useRouter();
     const query = router.asPath.split('#')[1];
-    console.log(query);
 
     const getProject = (q) => {
         switch (q) {
