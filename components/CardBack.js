@@ -4,8 +4,8 @@ const CardBack = () => {
     return (
         <div className={styles.card_back}>
             <p>
-                Julia Bell likes software. She is a Master's candidate in Computer Science at Columbia. Previously, she was a Product Manager at <a href="https://piano.io/">Piano</a>.
-                She lives in Brooklyn, NY.
+                Julian Bell likes software. They are a Master's candidate in Computer Science at Columbia. Previously, they were a Product Manager at <a href="https://piano.io/">Piano</a>.
+                They live in Brooklyn, NY.
             </p>
         </div>
     );

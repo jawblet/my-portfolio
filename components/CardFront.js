@@ -9,9 +9,9 @@ const CardFront = (props, ref) => {
                     <Stars {...props} ref={props.starRef}/>
                 </div>
                 <div className={styles.card_title}>
-                    <h1>julia bell</h1>
+                    <h1>julian bell</h1>
                     <h5 className={`${styles.email} select`} ref={ref}>
-                        juliabell021@gmail.com
+                        8311julian@gmail.com
                     </h5>
                 </div>
                 <div className={styles.card_bottom}>

@@ -24,7 +24,7 @@ const Card = (props) => {
 
         // if emailRef is clicked 
         if(emailRef.current && emailRef.current.contains(e.target)) {
-            copyTextToClipboard("juliabell021@gmail.com");
+            copyTextToClipboard("8311julian@gmail.com");
             return setBanner("email");
         }
 
