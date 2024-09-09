@@ -16,7 +16,7 @@ const Leo = ({ setBanner }) => {
         hasTimeElapsed && setBanner(null);
     }, [hasTimeElapsed]);
 
-    return(<h1>yes...she's a leo😈🔥🌞</h1>)
+    return(<h1>yes...they're a leo😈🔥🌞</h1>)
   }
 
 const Copied = ({ setBanner }) => {

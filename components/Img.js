@@ -17,7 +17,7 @@ const Img = ({setImg}) => {
   }, [hasTimeElapsed]);
 
     return (
-    <Image src="/jb.png" alt="Picture of Julia" 
+    <Image src="/jb.png" alt="Picture of Julian" 
         quality={80}
         width={200}
         height={300}
